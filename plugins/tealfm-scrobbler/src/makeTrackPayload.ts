@@ -15,8 +15,6 @@ const releaseFromRecording = async (recording_mbid: string) => {
 		.then(({ releases }) => releases?.filter((release) => release["text-representation"].language === "eng")[0] ?? releases?.[0])
 		.catch(trace.warn.withContext("brainzItem.getISRCRecordings"));
 
-	if (release === undefined) return undefined;
-
 	return release;
 };
 
@@ -46,6 +44,8 @@ export const makeTrackPayload = async (mediaItem: MediaItem): Promise<Payload> =
 		media_player: "Tidal Desktop",
 		submission_client: "TidaLuna Scrobbler",
 	};
+
 	delUndefined(trackPayload.track_metadata.additional_info);
+
 	return trackPayload;
 };

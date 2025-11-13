@@ -25,8 +25,8 @@ export const Settings = () => {
 				desc={
 					<>
 						User token from{" "}
-						<LunaLink fontWeight="bold" href={`${domain}/settings`}>
-							piper.example.com/settings
+						<LunaLink fontWeight="bold" href={`${domain}/api-keys`}>
+							${domain}/api-keys
 						</LunaLink>
 					</>
 				}
