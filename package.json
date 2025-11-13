@@ -1,0 +1,38 @@
+{
+	"name": "@isabelroses/luna-plugins",
+	"description": "Plugins for Tidal Luna",
+	"author": {
+		"name": "isabel roses",
+		"url": "https://github.com/isabelroses",
+		"avatarUrl": "https://gravatar.com/userimage/232792789/68fcbbf487cf9eacc4c420d4b6ebcc96.jpeg"
+	},
+	"homepage": "https://github.com/isabelroses/luna-plugins",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/isabelroses/luna-plugins.git"
+	},
+	"type": "module",
+	"scripts": {
+		"watch": "concurrently npm:esWatch npm:serve",
+		"build": "rimraf ./dist && tsx esbuild.config.ts",
+		"esWatch": "rimraf ./dist && tsx ./esbuild.config.ts --watch",
+		"serve": "http-server ./dist -p 3000 -s --cors -c-1"
+	},
+	"devDependencies": {
+		"@inrixia/helpers": "^3.20.2",
+		"@types/node": "^24.0.0",
+		"@types/react": "^19.1.7",
+		"@types/react-dom": "^19.1.6",
+		"concurrently": "^9.1.2",
+		"electron": "^36.4.0",
+		"http-server": "^14.1.1",
+		"luna": "github:inrixia/TidaLuna#10ae3d0",
+		"oby": "^15.1.2",
+		"rimraf": "^6.0.1",
+		"tsx": "^4.20.0",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"musicbrainz-api": "^0.26.0"
+	}
+}

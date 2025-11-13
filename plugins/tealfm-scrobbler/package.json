@@ -1,0 +1,11 @@
+{
+	"name": "tealfm-scrobbler",
+	"description": "Scrobbles and sets currently playing for teal.fm",
+	"homepage": "https://github.com/isabelroses/luna-plugins#tealfm-scrobbler",
+	"author": {
+		"name": "isabelroses",
+		"url": "https://github.com/isabelroses",
+		"avatarUrl": "https://gravatar.com/userimage/232792789/68fcbbf487cf9eacc4c420d4b6ebcc96.jpeg"
+	},
+	"exports": "./src/index.ts"
+}
